@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Register</title>
+    <style>
+        body {
+            /* background: linear-gradient(to right, #fc2c77,#6c4079); */
+            background-image: linear-gradient(to right, rgba(0, 168, 255, 0.5), rgba(185, 0, 255, 0.5)), url("https://wallpaperaccess.com/full/185899.jpg");
+            background-size: 100%;
+            /* background-repeat: no-repeat; */
+            /* width: 100%; */
+        }
+
+        .container {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            width: 50%;
+        }
+
+        /* fname css */
+        #cancelImg {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #cancelImg img {
+            height: 1.2rem;
+        }
+
+        #correctImg {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #correctImg img {
+            height: 1.2rem;
+        }
+
+        /* lname css */
+        #cancelImg1 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #cancelImg1 img {
+            height: 1.2rem;
+        }
+
+        #correctImg1 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #correctImg1 img {
+            height: 1.2rem;
+        }
+
+        /* email css */
+        #cancelImg2 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #cancelImg2 img {
+            height: 1.2rem;
+        }
+
+        #correctImg2 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #correctImg2 img {
+            height: 1.2rem;
+        }
+
+        /* mobile css */
+        #cancelImg3 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #cancelImg3 img {
+            height: 1.2rem;
+        }
+
+        #correctImg3 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #correctImg3 img {
+            height: 1.2rem;
+        }
+
+        /* password css */
+        #cancelImg4 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #cancelImg4 img {
+            height: 1.2rem;
+        }
+
+        #correctImg4 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #correctImg4 img {
+            height: 1.2rem;
+        }
+
+        /* re enter password */
+        #cancelImg5 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #cancelImg5 img {
+            height: 1.2rem;
+        }
+
+        #correctImg5 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #correctImg5 img {
+            height: 1.2rem;
+        }
+
+        /* Address */
+        #cancelImg6 {
+            position: absolute;
+            visibility: hidden;
+            left: 26.5rem;
+            bottom: 10.5rem;
+
+        }
+
+        #cancelImg6 img {
+            height: 1.2rem;
+        }
+
+        #correctImg6 {
+            position: absolute;
+            visibility: hidden;
+            left: 26.5rem;
+            bottom: 10.5rem;
+
+        }
+
+        #correctImg6 img {
+            height: 1.2rem;
+        }
+
+        /* City */
+        #cancelImg7 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #cancelImg7 img {
+            height: 1.2rem;
+        }
+
+        #correctImg7 {
+            position: absolute;
+            visibility: hidden;
+            right: 1rem;
+            bottom: 2rem;
+
+        }
+
+        #correctImg7 img {
+            height: 1.2rem;
+        }
+
+        /* Zip code */
+        #cancelImg8 {
+            position: absolute;
+            visibility: hidden;
+            right: 4.5rem;
+            bottom: 4.5rem;
+
+        }
+
+        #cancelImg8 img {
+            height: 1.2rem;
+        }
+
+        #correctImg8 {
+            position: absolute;
+            visibility: hidden;
+            right: 4.5rem;
+            bottom: 4.5rem;
+
+        }
+
+        #correctImg8 img {
+            height: 1.2rem;
+        }
+
+        /* Dropdown List */
+        #cancelImg9 {
+            position: absolute;
+            visibility: hidden;
+            left: 2.8rem;
+            bottom: 4.5rem;
+
+        }
+
+        #cancelImg9 img {
+            height: 1.2rem;
+        }
+
+        #correctImg9 {
+            position: absolute;
+            visibility: hidden;
+            left: 2.8rem;
+            bottom: 4.5rem;
+
+        }
+
+        #correctImg9 img {
+            height: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-4">
+
+        <h2>Create an account</h2>
+        <form name="regForm" action="/registration" onsubmit="return validateform()" method="POST">
+            <div class="form-row">
+                <div class="col">
+                    <label for="fname">First name</label>
+                    <input type="text" class="form-control" id="fname" name="firstname" placeholder="First name"
+                        onkeyup="executeFNAME()">
+                    <span id="msg"><small></small></span>
+                    <span id="cancelImg"><img src="/images/cancel.png" alt="cancelImg"></span>
+                    <span id="correctImg"><img src="/images/check.png" alt="correctImg"></span>
+                </div>
+                <div class="col">
+                    <label for="lname">Last name</label>
+                    <input type="text" class="form-control" id="lname" name="lastname" placeholder="Last name"
+                        onkeyup="executeLNAME()">
+                    <span id="msg1"><small></small></span>
+                    <span id="cancelImg1"><img src="/images/cancel.png" alt="cancelImg"></span>
+                    <span id="correctImg1"><img src="/images/check.png" alt="correctImg"></span>
+                </div>
+            </div>
+            <div class="form-row mt-2">
+                <div class="form-group col-md-6 ">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email"
+                        onkeyup="executeEMAIL()">
+                    <span id="msg2"><small></small></span>
+                    <span id="cancelImg2"><img src="/images/cancel.png" alt="cancelImg"></span>
+                    <span id="correctImg2"><img src="/images/check.png" alt="correctImg"></span>
+                </div>
+                <div class="form-group col-md-6 ">
+                    <label for="inputMobile">Mobile</label>
+                    <input type="text" class="form-control" id="inputMobile" name="mobileNo" placeholder="Mobile"
+                        onkeyup="executeMOBILE()">
+                    <span id="msg3"><small></small></span>
+                    <span id="cancelImg3"><img src="/images/cancel.png" alt="cancelImg"></span>
+                    <span id="correctImg3"><img src="/images/check.png" alt="correctImg"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" name="password"
+                        placeholder="Password" onkeyup="executePASSWD()">
+                    <span id="msg4"><small></small></span>
+                    <span id="cancelImg4"><img src="/images/cancel.png" alt="cancelImg"></span>
+                    <span id="correctImg4"><img src="/images/check.png" alt="correctImg"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputConfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="inputConfirmPassword" name="cpassword"
+                        placeholder="Retype Password" onkeyup="executeREPWD()">
+                    <span id="msg5"><small></small></span>
+                    <span id="cancelImg5"><img src="/images/cancel.png" alt="cancelImg"></span>
+                    <span id="correctImg5"><img src="/images/check.png" alt="correctImg"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <textarea class="form-control" id="inputAddress" name="address"
+                    rows="3" style="resize: none;" placeholder="Enter your address for delivery"
+                    onkeyup="executeADDRESS()"></textarea>
+                <span id="msg6"><small></small></span>
+                <span id="cancelImg6"><img src="/images/cancel.png" alt="cancelImg"></span>
+                <span id="correctImg6"><img src="/images/check.png" alt="correctImg"></span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" name="city" placeholder="Your city name"
+                        onkeyup="executeCITY()">
+                    <span id="msg7"><small></small></span>
+                    <span id="cancelImg7"><img src="/images/cancel.png" alt="cancelImg"></span>
+                    <span id="correctImg7"><img src="/images/check.png" alt="correctImg"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" name="state" class="form-control" onclick="return dropdown()">
+                        <option style="background-color: rgb(221, 221, 221);" selected disabled>Select your State...
+                        </option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+                    <span id="msg9"><small></small></span>
+                    <span id="cancelImg9"><img src="/images/cancel.png" alt="cancelImg"></span>
+                    <span id="correctImg9"><img src="/images/check.png" alt="correctImg"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputZip">Pincode</label>
+                    <input type="text" class="form-control" id="inputZip" name="pincode" placeholder="Area Pincode"
+                        onkeyup="executeZIP()">
+                    <span id="msg8"><small></small></span>
+                    <span id="cancelImg8"><img src="/images/cancel.png" alt="cancelImg"></span>
+                    <span id="correctImg8"><img src="/images/check.png" alt="correctImg"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        I agree to the terms and conditions.
+                    </label>
+                </div>
+            </div>
+            <button type="submit" disabled id="submitBtn" class="btn btn-primary w-25"
+                onclick="if(!document.regForm.gridCheck.checked){alert('Agree to the terms and conditions');return false}else{ return validateform();}">Submit</button>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        function executeFNAME() {
+            let input1 = document.getElementById('fname');
+            let timeout = null;
+            input1.addEventListener('keyup', function (e) {
+                clearTimeout(timeout);
+                timeout = setTimeout(function () {
+                    var fname = document.regForm.fname.value;
+                    if (fname == '') {
+                        document.getElementById("msg").style.visibility = "visible";
+                        document.getElementById("msg").style.color = "red";
+                        document.getElementById("fname").style.borderColor = "red";
+                        document.getElementById("msg").innerHTML = "This field cannot be empty";
+                        document.getElementById("correctImg").style.visibility = "hidden";
+                        document.getElementById("cancelImg").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    else {
+                        document.getElementById("cancelImg").style.visibility = "hidden";
+                        document.getElementById("correctImg").style.visibility = "visible";
+                        document.getElementById("fname").style.borderColor = "green";
+                        document.getElementById("msg").style.visibility = "visible";
+                        document.getElementById("msg").innerHTML = "Valid!";
+                        document.getElementById("msg").style.color = "green";
+                    }
+                }, 500);
+            });
+        }
+        function executeLNAME() {
+            let input2 = document.getElementById('lname');
+            let timeout1 = null;
+            input2.addEventListener('keyup', function (e) {
+                clearTimeout(timeout1);
+                timeout1 = setTimeout(function () {
+                    var lname = document.regForm.lname.value;
+                    if (lname == '') {
+                        document.getElementById("msg1").style.visibility = "visible";
+                        document.getElementById("msg1").style.color = "red";
+                        document.getElementById("lname").style.borderColor = "red";
+                        document.getElementById("msg1").innerHTML = "This field cannot be empty";
+                        document.getElementById("correctImg1").style.visibility = "hidden";
+                        document.getElementById("cancelImg1").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    else {
+                        document.getElementById("cancelImg1").style.visibility = "hidden";
+                        document.getElementById("correctImg1").style.visibility = "visible";
+                        document.getElementById("lname").style.borderColor = "green";
+                        document.getElementById("msg1").style.visibility = "visible";
+                        document.getElementById("msg1").innerHTML = "Valid!";
+                        document.getElementById("msg1").style.color = "green";
+
+                    }
+                }, 500);
+            });
+        }
+        function executeEMAIL() {
+            let input3 = document.getElementById('inputEmail');
+            let timeout2 = null;
+            input3.addEventListener('keyup', function (e) {
+                clearTimeout(timeout2);
+                timeout2 = setTimeout(function () {
+                    var email = document.regForm.inputEmail.value;
+                    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    if (email == null || email == '') {
+                        document.getElementById("msg2").innerHTML = "This field cannot be empty";
+                        document.getElementById("msg2").style.color = "red";
+                        document.getElementById("inputEmail").style.borderColor = "red";
+                        document.getElementById("cancelImg2").style.visibility = "visible";
+                        document.getElementById("correctImg2").style.visibility = "hidden";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    if (!email.match(mailformat)) {
+                        document.getElementById("msg2").style.visibility = "visible";
+                        document.getElementById("msg2").style.color = "red";
+                        document.getElementById("inputEmail").style.borderColor = "red";
+                        document.getElementById("msg2").innerHTML = "Enter a valid email ID!";
+                        document.getElementById("correctImg2").style.visibility = "hidden";
+                        document.getElementById("cancelImg2").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    else {
+                        document.getElementById("cancelImg2").style.visibility = "hidden";
+                        document.getElementById("correctImg2").style.visibility = "visible";
+                        document.getElementById("inputEmail").style.borderColor = "green";
+                        document.getElementById("msg2").style.visibility = "visible";
+                        document.getElementById("msg2").innerHTML = "Valid Email ID!";
+                        document.getElementById("msg2").style.color = "green";
+
+                    }
+                }, 500);
+            });
+        }
+        function executeMOBILE() {
+            let input4 = document.getElementById('inputMobile');
+            let timeout3 = null;
+            input4.addEventListener('keyup', function (e) {
+                clearTimeout(timeout3);
+                timeout3 = setTimeout(function () {
+                    var mobile = document.regForm.inputMobile.value;
+                    var phone = /^\d{10}$/;
+                    if (mobile == null || mobile == '') {
+                        document.getElementById("msg3").innerHTML = "This field cannot be empty";
+                        document.getElementById("msg3").style.color = "red";
+                        document.getElementById("inputMobile").style.borderColor = "red";
+                        document.getElementById("cancelImg3").style.visibility = "visible";
+                        document.getElementById("correctImg3").style.visibility = "hidden";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    if (!mobile.match(phone)) {
+                        document.getElementById("msg3").style.visibility = "visible";
+                        document.getElementById("msg3").style.color = "red";
+                        document.getElementById("inputMobile").style.borderColor = "red";
+                        document.getElementById("msg3").innerHTML = "Enter a valid Contact number!";
+                        document.getElementById("correctImg3").style.visibility = "hidden";
+                        document.getElementById("cancelImg3").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    else {
+                        document.getElementById("cancelImg3").style.visibility = "hidden";
+                        document.getElementById("correctImg3").style.visibility = "visible";
+                        document.getElementById("inputMobile").style.borderColor = "green";
+                        document.getElementById("msg3").style.visibility = "visible";
+                        document.getElementById("msg3").innerHTML = "Valid Contact Number!";
+                        document.getElementById("msg3").style.color = "green";
+
+                    }
+                }, 500);
+            });
+        }
+        function executePASSWD() {
+            let input5 = document.getElementById('inputPassword');
+            let timeout4 = null;
+            input5.addEventListener('keyup', function (e) {
+                clearTimeout(timeout4);
+                timeout4 = setTimeout(function () {
+                    var pwd = document.regForm.inputPassword.value;
+                    if (pwd == null || pwd == '') {
+                        document.getElementById("msg4").innerHTML = "This field cannot be empty";
+                        document.getElementById("msg4").style.color = "red";
+                        document.getElementById("inputPassword").style.borderColor = "red";
+                        document.getElementById("cancelImg4").style.visibility = "visible";
+                        document.getElementById("correctImg4").style.visibility = "hidden";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    //Password Length
+                    if (pwd.length < 8) {
+                        document.getElementById("msg4").style.visibility = "visible";
+                        document.getElementById("msg4").style.color = "red";
+                        document.getElementById("inputPassword").style.borderColor = "red";
+                        document.getElementById("msg4").style.fontSize = "small";
+                        document.getElementById("msg4").innerHTML = "Password should be greater than 8 characters!";
+                        document.getElementById("correctImg4").style.visibility = "hidden";
+                        document.getElementById("cancelImg4").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    //Lowercase Letters
+                    var lowerCaseLetters = /[a-z]/g;
+                    if (!pwd.match(lowerCaseLetters)) {
+                        document.getElementById("msg4").style.visibility = "visible";
+                        document.getElementById("msg4").style.color = "red";
+                        document.getElementById("inputPassword").style.borderColor = "red";
+                        document.getElementById("msg4").style.fontSize = "small";
+                        document.getElementById("msg4").innerHTML = "Password should contain atleast one lowercase letter!";
+                        document.getElementById("correctImg4").style.visibility = "hidden";
+                        document.getElementById("cancelImg4").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    //Uppercase Letters
+                    var upperCaseLetters = /[A-Z]/g;
+                    if (!pwd.match(upperCaseLetters)) {
+                        document.getElementById("msg4").style.visibility = "visible";
+                        document.getElementById("msg4").style.color = "red";
+                        document.getElementById("inputPassword").style.borderColor = "red";
+                        document.getElementById("msg4").style.fontSize = "80%";
+                        document.getElementById("msg4").innerHTML = "Password should contain atleast one uppercase letter!";
+                        document.getElementById("correctImg4").style.visibility = "hidden";
+                        document.getElementById("cancelImg4").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    //Numbers
+                    var numbers = /[0-9]/g;
+                    if (!pwd.match(numbers)) {
+                        document.getElementById("msg4").style.visibility = "visible";
+                        document.getElementById("msg4").style.color = "red";
+                        document.getElementById("inputPassword").style.borderColor = "red";
+                        document.getElementById("msg4").style.fontSize = "small";
+                        document.getElementById("msg4").innerHTML = "Password should contain atleast one number!";
+                        document.getElementById("correctImg4").style.visibility = "hidden";
+                        document.getElementById("cancelImg4").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    //Special Characters
+                    var special_chars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                    if (!pwd.match(special_chars)) {
+                        document.getElementById("msg4").style.visibility = "visible";
+                        document.getElementById("msg4").style.color = "red";
+                        document.getElementById("inputPassword").style.borderColor = "red";
+                        document.getElementById("msg4").style.fontSize = "80%";
+                        document.getElementById("msg4").innerHTML = "Password should contain atleast one special character!";
+                        document.getElementById("correctImg4").style.visibility = "hidden";
+                        document.getElementById("cancelImg4").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    else {
+                        document.getElementById("cancelImg4").style.visibility = "hidden";
+                        document.getElementById("correctImg4").style.visibility = "visible";
+                        document.getElementById("inputPassword").style.borderColor = "green";
+                        document.getElementById("msg4").style.visibility = "visible";
+                        document.getElementById("msg4").innerHTML = "Valid Password!";
+                        document.getElementById("msg4").style.color = "green";
+
+                    }
+                }, 500);
+            });
+        }
+        function executeREPWD() {
+            let input6 = document.getElementById('inputConfirmPassword');
+            let timeout5 = null;
+            input6.addEventListener('keyup', function (e) {
+                clearTimeout(timeout5);
+                timeout5 = setTimeout(function () {
+                    var repwd = document.regForm.inputConfirmPassword.value;
+                    var pwd = document.regForm.inputPassword.value;
+                    if (repwd == null || repwd == '') {
+                        document.getElementById("msg5").innerHTML = "This field cannot be empty";
+                        document.getElementById("msg5").style.color = "red";
+                        document.getElementById("inputConfirmPassword").style.borderColor = "red";
+                        document.getElementById("cancelImg5").style.visibility = "visible";
+                        document.getElementById("correctImg5").style.visibility = "hidden";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    if (repwd != pwd) {
+                        document.getElementById("msg5").style.visibility = "visible";
+                        document.getElementById("msg5").style.color = "red";
+                        document.getElementById("inputConfirmPassword").style.borderColor = "red";
+                        document.getElementById("msg5").innerHTML = "Password entered doesn't match!";
+                        document.getElementById("correctImg5").style.visibility = "hidden";
+                        document.getElementById("cancelImg5").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    else {
+                        document.getElementById("cancelImg5").style.visibility = "hidden";
+                        document.getElementById("correctImg5").style.visibility = "visible";
+                        document.getElementById("inputConfirmPassword").style.borderColor = "green";
+                        document.getElementById("msg5").style.visibility = "visible";
+                        document.getElementById("msg5").innerHTML = "Password entered matched!";
+                        document.getElementById("msg5").style.color = "green";
+
+                    }
+                }, 500);
+            });
+        }
+        function executeADDRESS() {
+            let input7 = document.getElementById('inputAddress');
+            let timeout6 = null;
+            input7.addEventListener('keyup', function (e) {
+                clearTimeout(timeout6);
+                timeout6 = setTimeout(function () {
+                    var addr = document.regForm.inputAddress.value;
+                    if (addr == '') {
+                        document.getElementById("msg6").style.visibility = "visible";
+                        document.getElementById("msg6").style.color = "red";
+                        document.getElementById("inputAddress").style.borderColor = "red";
+                        document.getElementById("msg6").innerHTML = "This field cannot be empty";
+                        document.getElementById("correctImg6").style.visibility = "hidden";
+                        document.getElementById("cancelImg6").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    else {
+                        document.getElementById("cancelImg6").style.visibility = "hidden";
+                        document.getElementById("correctImg6").style.visibility = "visible";
+                        document.getElementById("inputAddress").style.borderColor = "green";
+                        document.getElementById("msg6").style.visibility = "hidden";
+
+                    }
+                }, 500);
+            });
+        }
+        function executeCITY() {
+            let input8 = document.getElementById('inputCity');
+            let timeout7 = null;
+            input8.addEventListener('keyup', function (e) {
+                clearTimeout(timeout7);
+                timeout7 = setTimeout(function () {
+                    var city = document.regForm.inputCity.value;
+                    if (city == '') {
+                        document.getElementById("msg7").style.visibility = "visible";
+                        document.getElementById("msg7").style.color = "red";
+                        document.getElementById("inputCity").style.borderColor = "red";
+                        document.getElementById("msg7").innerHTML = "This field cannot be empty";
+                        document.getElementById("correctImg7").style.visibility = "hidden";
+                        document.getElementById("cancelImg7").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    else {
+                        document.getElementById("cancelImg7").style.visibility = "hidden";
+                        document.getElementById("correctImg7").style.visibility = "visible";
+                        document.getElementById("inputCity").style.borderColor = "green";
+                        document.getElementById("msg7").style.visibility = "visible";
+                        document.getElementById("msg7").innerHTML = "Valid!";
+                        document.getElementById("msg7").style.color = "green";
+
+                    }
+                }, 500);
+            });
+        }
+        function executeZIP() {
+            let input9 = document.getElementById('inputZip');
+            let timeout8 = null;
+            input9.addEventListener('keyup', function (e) {
+                clearTimeout(timeout8);
+                timeout8 = setTimeout(function () {
+                    var zip = document.regForm.inputZip.value;
+                    var validZipCode = /(^\d{6}$)/;
+                    if (zip == '') {
+                        document.getElementById("msg8").style.visibility = "visible";
+                        document.getElementById("msg8").style.color = "red";
+                        document.getElementById("inputZip").style.borderColor = "red";
+                        document.getElementById("msg8").style.fontSize = "70%";
+                        document.getElementById("msg8").innerHTML = "This field cannot be empty";
+                        document.getElementById("correctImg8").style.visibility = "hidden";
+                        document.getElementById("cancelImg8").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    if (!zip.match(validZipCode)) {
+                        document.getElementById("msg8").style.visibility = "visible";
+                        document.getElementById("msg8").style.color = "red";
+                        document.getElementById("inputZip").style.borderColor = "red";
+                        document.getElementById("msg8").style.fontSize = "70%";
+                        document.getElementById("msg8").innerHTML = "Enter a valid Zipcode";
+                        document.getElementById("correctImg8").style.visibility = "hidden";
+                        document.getElementById("cancelImg8").style.visibility = "visible";
+                        document.getElementById("submitBtn").disabled = true;
+                        return false;
+                    }
+                    else {
+                        document.getElementById("cancelImg8").style.visibility = "hidden";
+                        document.getElementById("correctImg8").style.visibility = "visible";
+                        document.getElementById("inputZip").style.borderColor = "green";
+                        document.getElementById("msg8").style.visibility = "visible";
+                        document.getElementById("msg8").innerHTML = "Valid Zipcode!";
+                        document.getElementById("msg8").style.color = "green";
+                        document.getElementById("msg8").style.fontSize = "80%";
+                        document.getElementById("submitBtn").disabled = false;
+                    }
+                }, 500);
+            });
+        }
+        function validateform() {
+            // Fname
+            var fname = document.regForm.fname.value;
+            if (fname == '') {
+                document.getElementById("msg").style.visibility = "visible";
+                document.getElementById("msg").style.color = "red";
+                document.getElementById("fname").style.borderColor = "red";
+                document.getElementById("msg").innerHTML = "This field cannot be empty";
+                document.getElementById("correctImg").style.visibility = "hidden";
+                document.getElementById("cancelImg").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg").style.visibility = "hidden";
+                document.getElementById("correctImg").style.visibility = "visible";
+                document.getElementById("fname").style.borderColor = "green";
+                document.getElementById("msg").style.visibility = "hidden";
+            }
+            // Lname
+            var lname = document.regForm.lname.value;
+            if (lname == '') {
+                document.getElementById("msg1").style.visibility = "visible";
+                document.getElementById("msg1").style.color = "red";
+                document.getElementById("lname").style.borderColor = "red";
+                document.getElementById("msg1").innerHTML = "This field cannot be empty";
+                document.getElementById("correctImg1").style.visibility = "hidden";
+                document.getElementById("cancelImg1").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg1").style.visibility = "hidden";
+                document.getElementById("correctImg1").style.visibility = "visible";
+                document.getElementById("lname").style.borderColor = "green";
+                document.getElementById("msg1").style.visibility = "hidden";
+            }
+            //Email
+            var email = document.regForm.inputEmail.value;
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (email == null || email == '') {
+                document.getElementById("msg2").innerHTML = "This field cannot be empty";
+                document.getElementById("msg2").style.color = "red";
+                document.getElementById("inputEmail").style.borderColor = "red";
+                document.getElementById("cancelImg2").style.visibility = "visible";
+                document.getElementById("correctImg2").style.visibility = "hidden";
+                return false;
+            }
+            if (!email.match(mailformat)) {
+                document.getElementById("msg2").style.visibility = "visible";
+                document.getElementById("msg2").style.color = "red";
+                document.getElementById("inputEmail").style.borderColor = "red";
+                document.getElementById("msg2").innerHTML = "Enter a valid email ID!";
+                document.getElementById("correctImg2").style.visibility = "hidden";
+                document.getElementById("cancelImg2").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg2").style.visibility = "hidden";
+                document.getElementById("correctImg2").style.visibility = "visible";
+                document.getElementById("inputEmail").style.borderColor = "green";
+                document.getElementById("msg2").style.visibility = "hidden";
+            }
+            // Mobile
+            var mobile = document.regForm.inputMobile.value;
+            var phone = /^\d{10}$/;
+            if (mobile == null || mobile == '') {
+                document.getElementById("msg3").innerHTML = "This field cannot be empty";
+                document.getElementById("msg3").style.color = "red";
+                document.getElementById("inputMobile").style.borderColor = "red";
+                document.getElementById("cancelImg3").style.visibility = "visible";
+                document.getElementById("correctImg3").style.visibility = "hidden";
+                return false;
+            }
+            if (!mobile.match(phone)) {
+                document.getElementById("msg3").style.visibility = "visible";
+                document.getElementById("msg3").style.color = "red";
+                document.getElementById("inputMobile").style.borderColor = "red";
+                document.getElementById("msg3").innerHTML = "Enter a valid Contact number!";
+                document.getElementById("correctImg3").style.visibility = "hidden";
+                document.getElementById("cancelImg3").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg3").style.visibility = "hidden";
+                document.getElementById("correctImg3").style.visibility = "visible";
+                document.getElementById("inputMobile").style.borderColor = "green";
+                document.getElementById("msg3").style.visibility = "hidden";
+            }
+            // Password
+            var pwd = document.regForm.inputPassword.value;
+            if (pwd == null || pwd == '') {
+                document.getElementById("msg4").innerHTML = "This field cannot be empty";
+                document.getElementById("msg4").style.color = "red";
+                document.getElementById("inputPassword").style.borderColor = "red";
+                document.getElementById("cancelImg4").style.visibility = "visible";
+                document.getElementById("correctImg4").style.visibility = "hidden";
+                return false;
+            }
+            //Password Length
+            if (pwd.length < 8) {
+                document.getElementById("msg4").style.visibility = "visible";
+                document.getElementById("msg4").style.color = "red";
+                document.getElementById("inputPassword").style.borderColor = "red";
+                document.getElementById("msg4").style.fontSize = "small";
+                document.getElementById("msg4").innerHTML = "Password should be greater than 8 characters!";
+                document.getElementById("correctImg4").style.visibility = "hidden";
+                document.getElementById("cancelImg4").style.visibility = "visible";
+                return false;
+            }
+            //Lowercase Letters
+            var lowerCaseLetters = /[a-z]/g;
+            if (!pwd.match(lowerCaseLetters)) {
+                document.getElementById("msg4").style.visibility = "visible";
+                document.getElementById("msg4").style.color = "red";
+                document.getElementById("inputPassword").style.borderColor = "red";
+                document.getElementById("msg4").style.fontSize = "small";
+                document.getElementById("msg4").innerHTML = "Password should contain atleast one lowercase letter!";
+                document.getElementById("correctImg4").style.visibility = "hidden";
+                document.getElementById("cancelImg4").style.visibility = "visible";
+                return false;
+            }
+            //Uppercase Letters
+            var upperCaseLetters = /[A-Z]/g;
+            if (!pwd.match(upperCaseLetters)) {
+                document.getElementById("msg4").style.visibility = "visible";
+                document.getElementById("msg4").style.color = "red";
+                document.getElementById("inputPassword").style.borderColor = "red";
+                document.getElementById("msg4").style.fontSize = "small";
+                document.getElementById("msg4").innerHTML = "Password should contain atleast one uppercase letter!";
+                document.getElementById("correctImg4").style.visibility = "hidden";
+                document.getElementById("cancelImg4").style.visibility = "visible";
+                return false;
+            }
+            //Numbers
+            var numbers = /[0-9]/g;
+            if (!pwd.match(numbers)) {
+                document.getElementById("msg4").style.visibility = "visible";
+                document.getElementById("msg4").style.color = "red";
+                document.getElementById("inputPassword").style.borderColor = "red";
+                document.getElementById("msg4").style.fontSize = "small";
+                document.getElementById("msg4").innerHTML = "Password should contain atleast one number!";
+                document.getElementById("correctImg4").style.visibility = "hidden";
+                document.getElementById("cancelImg4").style.visibility = "visible";
+                return false;
+            }
+            //Special Characters
+            var special_chars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if (!pwd.match(special_chars)) {
+                document.getElementById("msg4").style.visibility = "visible";
+                document.getElementById("msg4").style.color = "red";
+                document.getElementById("inputPassword").style.borderColor = "red";
+                document.getElementById("msg4").style.fontSize = "80%";
+                document.getElementById("msg4").innerHTML = "Password should contain atleast one special character!";
+                document.getElementById("correctImg4").style.visibility = "hidden";
+                document.getElementById("cancelImg4").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg4").style.visibility = "hidden";
+                document.getElementById("correctImg4").style.visibility = "visible";
+                document.getElementById("inputPassword").style.borderColor = "green";
+                document.getElementById("msg4").style.visibility = "hidden";
+            }
+            //Renter password
+            var repwd = document.regForm.inputConfirmPassword.value;
+            var pwd = document.regForm.inputPassword.value;
+            if (repwd == null || repwd == '') {
+                document.getElementById("msg5").innerHTML = "This field cannot be empty";
+                document.getElementById("msg5").style.color = "red";
+                document.getElementById("inputConfirmPassword").style.borderColor = "red";
+                document.getElementById("cancelImg5").style.visibility = "visible";
+                document.getElementById("correctImg5").style.visibility = "hidden";
+                return false;
+            }
+            if (repwd != pwd) {
+                document.getElementById("msg5").style.visibility = "visible";
+                document.getElementById("msg5").style.color = "red";
+                document.getElementById("inputConfirmPassword").style.borderColor = "red";
+                document.getElementById("msg5").innerHTML = "Password entered doesn't match!";
+                document.getElementById("correctImg5").style.visibility = "hidden";
+                document.getElementById("cancelImg5").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg5").style.visibility = "hidden";
+                document.getElementById("correctImg5").style.visibility = "visible";
+                document.getElementById("inputConfirmPassword").style.borderColor = "green";
+                document.getElementById("msg5").style.visibility = "hidden";
+            }
+            // address
+            var addr = document.regForm.inputAddress.value;
+            if (addr == '') {
+                document.getElementById("msg6").style.visibility = "visible";
+                document.getElementById("msg6").style.color = "red";
+                document.getElementById("inputAddress").style.borderColor = "red";
+                document.getElementById("msg6").innerHTML = "This field cannot be empty";
+                document.getElementById("correctImg6").style.visibility = "hidden";
+                document.getElementById("cancelImg6").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg6").style.visibility = "hidden";
+                document.getElementById("correctImg6").style.visibility = "visible";
+                document.getElementById("inputAddress").style.borderColor = "green";
+                document.getElementById("msg6").style.visibility = "hidden";
+            }
+            // City
+            var city = document.regForm.inputCity.value;
+            if (city == '') {
+                document.getElementById("msg7").style.visibility = "visible";
+                document.getElementById("msg7").style.color = "red";
+                document.getElementById("inputCity").style.borderColor = "red";
+                document.getElementById("msg7").innerHTML = "This field cannot be empty";
+                document.getElementById("correctImg7").style.visibility = "hidden";
+                document.getElementById("cancelImg7").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg7").style.visibility = "hidden";
+                document.getElementById("correctImg7").style.visibility = "visible";
+                document.getElementById("inputCity").style.borderColor = "green";
+                document.getElementById("msg7").style.visibility = "hidden";
+            }
+            //Dropdown
+            var dropdownList = document.regForm.inputState.value;
+            if (dropdownList == "Select your State...") {
+                document.getElementById("msg9").style.visibility = "visible";
+                document.getElementById("msg9").style.color = "red";
+                document.getElementById("inputState").style.borderColor = "red";
+                document.getElementById("msg9").innerHTML = "This field cannot be empty";
+                document.getElementById("correctImg9").style.visibility = "hidden";
+                document.getElementById("cancelImg9").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg9").style.visibility = "hidden";
+                document.getElementById("correctImg9").style.visibility = "visible";
+                document.getElementById("inputState").style.borderColor = "green";
+                document.getElementById("msg9").style.visibility = "hidden";
+            }
+            // Zip
+            var zip = document.regForm.inputZip.value;
+            var validZipCode = /(^\d{6}$)/;
+            if (zip == '') {
+                document.getElementById("msg8").style.visibility = "visible";
+                document.getElementById("msg8").style.color = "red";
+                document.getElementById("inputZip").style.borderColor = "red";
+                document.getElementById("msg8").style.fontSize = "70%";
+                document.getElementById("msg8").innerHTML = "This field cannot be empty";
+                document.getElementById("correctImg8").style.visibility = "hidden";
+                document.getElementById("cancelImg8").style.visibility = "visible";
+                return false;
+            }
+            if (!zip.match(validZipCode)) {
+                document.getElementById("msg8").style.visibility = "visible";
+                document.getElementById("msg8").style.color = "red";
+                document.getElementById("inputZip").style.borderColor = "red";
+                document.getElementById("msg8").style.fontSize = "70%";
+                document.getElementById("msg8").innerHTML = "Enter a valid Zipcode";
+                document.getElementById("correctImg8").style.visibility = "hidden";
+                document.getElementById("cancelImg8").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg8").style.visibility = "hidden";
+                document.getElementById("correctImg8").style.visibility = "visible";
+                document.getElementById("inputZip").style.borderColor = "green";
+                document.getElementById("msg8").style.visibility = "hidden";
+            }
+            alert("Form Submitted Successfully!!");
+        }
+        function dropdown() {
+            var dropdownList = document.regForm.inputState.value;
+            if (dropdownList == "Select your State...") {
+                document.getElementById("msg9").style.visibility = "visible";
+                document.getElementById("msg9").style.color = "red";
+                document.getElementById("inputState").style.borderColor = "red";
+                document.getElementById("msg9").innerHTML = "This field cannot be empty";
+                document.getElementById("correctImg9").style.visibility = "hidden";
+                document.getElementById("cancelImg9").style.visibility = "visible";
+                return false;
+            }
+            else {
+                document.getElementById("cancelImg9").style.visibility = "hidden";
+                document.getElementById("correctImg9").style.visibility = "visible";
+                document.getElementById("inputState").style.borderColor = "green";
+                document.getElementById("msg9").style.visibility = "hidden";
+            }
+        }
+    </script>
+</body>
+
+</html>

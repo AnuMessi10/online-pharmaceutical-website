@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        /* Navbar */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        nav {
+            line-height: 1;
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+        }
+
+        a {
+            color: rgb(250, 250, 250) !important;
+            margin-left: 15px;
+            font-size: 1.2rem;
+            font-weight: 400;
+
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #198754 !important;
+        }
+
+        button {
+            font-size: 1.2rem;
+            width: 6rem;
+
+        }
+
+
+        h4 {
+            font-family: 'Pacifico', cursive;
+            margin: auto;
+            color: #ddfdff;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .links ul li a {
+            /* color: blue; */
+            color: rgb(212, 212, 212);
+        }
+
+        .details {
+            padding: 25px;
+            padding-bottom: 20px;
+            overflow: visible;
+            color: #4f585e;
+            font-size: 16px;
+
+
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        img:hover {
+            transform: scale(1.07);
+            transition: all ease 0.3s;
+        }
+    </style>
+    <title>Welcome</title>
+</head>
+
+
+<body>
+    <!-- Navbar -->
+    {{>navbar}}
+    {{#each details}}
+    <!-- Product details -->
+    <div class="container-fluid " style="max-width: 1366px;">
+        <!-- also can use col-8 and col-4  -->
+        <div class="col-12 h-50 d-flex m-auto my-4">
+            <div class="row g-0 border shadow-sm rounded overflow-none flex-md-row mb-4  h-md-250 "
+                style="width:inherit;">
+                <div class="col d-none d-lg-block" style="margin: 3rem;">
+                    <img style="cursor: pointer;" src="/images/{{this.Medicinename}}.png" class="bd-placeholder-img"
+                        width="300" height="100%" alt="">
+                </div>
+                <div class="col p-4 d-flex flex-column ">
+                    <div class="details">
+                        <h3 style="padding: 5px 0px;"> <b>{{this.Medicinename}}</b> </h3>
+                        <p>Visit Gajanan store</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-half-o checked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                        <span class="fa fa-star"></span>(1295 rating)
+                        <p class="price"><b>MRP{{this.MRP}}</b><br>
+                            {{!-- <span style="color: #8897a2;">MRP<span
+                                    style=" text-decoration: line-through;">₹135</span></span><br> --}}
+                            <small>Inclusive of all taxes</small>
+                        </p>
+                        <button type="button" class="btn btn-primary w-50"
+                            style="background: #10847e; color: #fff;width: auto;
+                        height: 45px;border-radius: 6px;font-weight: 700;cursor: pointer; outline: none; border: 1px solid;">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 mb-3 rounded ">
+                    <h6 style="font-size: 1rem;
+                        padding-left: 20px;"> <b>OFFERS</b></h6>
+                    <p class="mb-0" style="font-size: 12px;font-weight: 600;
+                        color: #3bb896; padding-left: 10px;"><img
+                            src="https://assets.pharmeasy.in/web-assets/dist/67890676.svg"
+                            style="    min-width: 18px;width: 18px;height: 18px;" alt="%">Flat 20% off + 20%
+                        cashback on your 1st medicine order</p>
+                    <p class="mb-0" style="font-size: 12px;font-weight: 600;
+                        color: #3bb896; padding-left: 10px;"><img
+                            src="https://assets.pharmeasy.in/web-assets/dist/67890676.svg"
+                            style="    min-width: 18px;width: 18px;height: 18px;" alt="%">Flat 20% off + 20%
+                        cashback on your 1st medicine order</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Details of products -->
+    <div class="container-fluid" style="max-width: 1366px;">
+        <div class="row g-0 m-auto mx-4">
+            <div class="col-md-8">
+                <article class="blog-post">
+                    <h5 class="blog-post-title"> <b>Description</b></h5>
+                    <p>{{this.Medicinename}} is a calcium and vitamin D tablet, which contains Cholecalciferol in
+                        Nanoparticulate
+                        form (1000IU) and elemental calcium in calcium carbonate form (500mg). As it contains both
+                        calcium and vitamin D the tablet is bi-layered. The tablet is prescribed to improve overall
+                        bone
+                        strength in men and women who have osteoporosis. It is also given as a supplement during
+                        pregnancy and at the time of nursing.
+                    </p>
+
+                    <h5 class="blog-post-title"> <b>How to use</b></h5>
+                    <p>{{this.Howtouse}}</p>
+
+                    <h5 class="blog-post-title"> <b>Uses</b></h5>
+                    <p>{{this.Uses}}</p>
+
+                    <h5 class="blog-post-title"> <b>Manufacturer</b></h5>
+                    <p>{{this.Manufacturer}}</p>
+
+                    <h5 class="blog-post-title"> <b>Salt</b></h5>
+                    <p>{{this.Salt}}</p>
+
+                    <h5 class="blog-post-title"> <b>Alternate Medicine</b></h5>
+                    <p>{{this.Alternatemedicine}}</p>
+
+                    <h5 class="blog-post-title"> <b>Chemical Class</b></h5>
+                    <p>{{this.Chemicalclass}}</p>
+
+
+                    <h5 class="blog-post-title"> <b>Type of sell</b></h5>
+                    <p>{{this.Typeofsell}}</p>
+
+                    <h5 class="blog-post-title"> <b>Side Effects</b></h5>
+                    <p>{{this.Sideeffects}}</p>
+
+                    
+                    <h5 class="blog-post-title"> <b>Therapeutic Class</b></h5>
+                    <p>{{this.Therapeuticclass}}</p>
+                    <h5 class="blog-post-title"> <b>Safety information</b></h5>
+                    <ul type="bullet">
+
+                        <li>Go through the information printed on the label before taking the tablet.</li>
+                        <li>Take the tablet only under medical guidance.</li>
+                        <li>Do not take more than the recommended dose.</li>
+                        <li>Inform your doctor if you are allergic to any of the ingredients in the tablet.</li>
+                        <li>Individuals sensitive to Vitamin D or calcium should inform their doctor and take
+                            precautionary measures.</li>
+                        <li>Excess intake of Vitamin D can cause hypercalcemia, so take the tablet as per the
+                            doctor's
+                            directions.</li>
+                        <li>Keep it away from the reach and sight of children.</li>
+                        <li>In case you had an overdose, get immediate medical aid.</li>
+                        <li>In case of a missed dose take the next dose. Do not take a double dose.</li>
+                        <li>Discontinue the tablet only after consulting your doctor.</li>
+                        <li>Check its expiry date.</li>
+
+                    </ul>
+
+                    <h5 class="blog-post-title"> <b>FAQs</b></h5>
+                    <div>
+                        <p><strong>Q1. How many tablets come in one strip of {{this.Medicinename}}?</strong></p>
+                        <p><strong>Ans:</strong> There are 10 tablets in one strip
+                            of<strong>{{this.Medicinename}}</strong>l.</p>
+
+                        <p><strong>Q2. Is {{this.Medicinename}} a vitamin supplement?</strong></p>
+                        <p><strong>Ans:</strong> Yes, <strong>{{this.Medicinename}}</strong> is a vitamin supplement
+                            of calcium and
+                            Vitamin D.</p>
+
+                        <p><strong>Q3. Can pregnant women take {{this.Medicinename}}?</strong></p>
+                        <p><strong>Ans: </strong>Yes, pregnant women and lactating mothers can take this tablet as
+                            prescribed by the doctor.</p>
+
+                        <p><strong>Q4. Is the tablet beneficial for those with osteoporosis?</strong></p>
+                        <p><strong>Ans: </strong>Yes, it is given to post-menopausal women and men who are at risk
+                            of or
+                            suffer from osteoporosis to prevent fractures.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+    <!-- footer -->
+    {{>footer}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="prouct_details.js"></script>
+</body>
+
+</html>

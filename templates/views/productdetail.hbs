@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/swiper.css">
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+<style>
+    /* Navbar */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    nav {
+        line-height: 1;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+    }
+
+    a {
+        color: white !important;
+        margin-left: 15px;
+        font-size: 1.2rem;
+        font-weight: 400;
+
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: blue !important;
+    }
+
+    button {
+        font-size: 1.2rem;
+        width: 6rem;
+
+    }
+
+
+    h4 {
+        font-family: 'Pacifico', cursive;
+        margin: auto;
+        color: #ddfdff;
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .links ul li a {
+        /* color: blue; */
+        color: rgb(212, 212, 212);
+    }
+
+    .details {
+        padding: 25px;
+        padding-bottom: 20px;
+        overflow: visible;
+        color: #4f585e;
+        font-size: 16px;
+
+
+    }
+
+    .checked {
+        color: orange;
+    }
+
+    img:hover {
+        transform: scale(1.07);
+        transition: all ease 0.3s;
+    }
+
+    .thumbnail {
+        border: 1px solid;
+        padding: 1rem;
+        height: 25rem;
+    }
+
+    .thumbnail img {
+        height: 12rem;
+        width: 16rem;
+        padding-bottom: 20px;
+        margin: 14px 0;
+
+    }
+
+
+
+    #cameras {
+        padding-bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    #product {
+        padding-bottom: 31px;
+        width: 25rem;
+    }
+
+    .cart {
+        font-size: 1.2rem;
+        /* background-color: black; */
+        background-color: #0d6efd;
+        padding: 10px 23px;
+        border: 1px solid black;
+        text-decoration: none;
+        border-radius: 50px;
+    }
+    .uploadingArea {
+      position: relative;
+      left: 45%;
+    }
+</style>
+<title>Welcome</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    {{>navbar}}
+    <div class="container content">
+        <div class="row row-cols-3 text-center" id="cameras">
+            {{#each details}}
+            <div class="col-md-3 col-sm-6 home-feature" id="product">
+                <div class="thumbnail">
+                    <img class="shop-item-image" src="images/{{this.Medicinename}}.png" alt="">
+                    <span class="prescription" style="display: none;">{{this.Prescription}}</span>
+                    <div class="caption">
+
+                        <p class="detail shop-item-title" style="padding-bottom: 1rem; 
+                        padding-top: 0rem;font-size: 1.3rem;">{{this.Medicinename}}</p>
+                        <p class="price shop-item-price">{{this.MRP}}</p>
+                    </div>
+                    <a href="#cart" onclick="return addToCart(`{{this.Medicinename}}`)"
+                        class="btn btn-primary shop-item-button" style="margin-top: 2rem;">Add to cart
+                    </a>
+                    <a href="/product?medname={{this.Medicinename}}&id={{this._id}}" class="btn btn-primary"
+                        style="border-left:1px solid #0d8bf2; margin-top: 2rem;">View Product</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="uploadingArea">
+        <label for="prescription-image">Upload your prescription here...</label>
+        <br>
+        <input style="padding-top: 1rem;" type="file" id="upload-file">
+    </div>
+    <section style="margin-top: 1.5rem;" class="container content-section" id="cart">
+        <h2 class="section-header">CART<img style="height: 3rem; padding-left: 0.5rem;" src="images/shopping-cart.png"
+                alt="image-of-cart"></h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <SPAN>₹</SPAN>
+
+            <span id="totalAmount" class="cart-total-price">0</span>
+        </div>
+
+        <div class="purchaseForm">
+            <button class="btn btn-primary btn-purchase" type="submit" style="font-size: small;"
+                id="rzp-button1">PURCHASE</button>
+        </div>
+    </section>
+    {{>footer}}
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', ready)
+    } else {
+        ready()
+    }
+
+    function ready() {
+        var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+        for (var i = 0; i < removeCartItemButtons.length; i++) {
+            var button = removeCartItemButtons[i]
+            button.addEventListener('click', removeCartItem)
+        }
+
+        var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+        for (var i = 0; i < quantityInputs.length; i++) {
+            var input = quantityInputs[i]
+            input.addEventListener('change', quantityChanged)
+        }
+
+        var addToCartButtons = document.getElementsByClassName('shop-item-button')
+        console.log(addToCartButtons);
+        for (var i = 0; i < addToCartButtons.length; i++) {
+            var button = addToCartButtons[i]
+            button.addEventListener('click', addToCartClicked)
+        }
+
+        document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+    }
+
+    function purchaseClicked() {
+        //alert('Thank you for your purchase')
+        var cartItems = document.getElementsByClassName('cart-items')[0]
+        while (cartItems.hasChildNodes()) {
+            cartItems.removeChild(cartItems.firstChild)
+        }
+        updateCartTotal()
+    }
+
+    function removeCartItem(event) {
+        var buttonClicked = event.target
+        buttonClicked.parentElement.parentElement.remove()
+        updateCartTotal()
+    }
+
+    function quantityChanged(event) {
+        var input = event.target
+        if (isNaN(input.value) || input.value <= 0) {
+            input.value = 1
+        }
+        updateCartTotal()
+    }
+
+    function addToCartClicked(event) {
+        var button = event.target
+        var shopItem = button.parentElement.parentElement
+        var presc = prescriptionChecker(shopItem.getElementsByClassName('prescription')[0].innerText)
+        if (presc == 'True') {
+            var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+            var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+            var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+            addItemToCart(title, price, imageSrc)
+            updateCartTotal()
+        }
+    }
+
+    function prescriptionChecker(prescriptionValue) {
+        if (prescriptionValue == "Prescription Required") {
+            var getName = document.getElementById('upload-file').value;
+            var fName = getName.slice(12, getName.length);
+            if (fName == '') {
+                alert("Please upload your prescription in the button given below.")
+                return "False";
+            }
+            else {
+                alert("Your uploaded prescription " + fName + " will be verified for the chosen medicine.")
+                return "True";
+            }
+        }
+        else {
+            return "True";
+        }
+    }
+
+    function addItemToCart(title, price, imageSrc) {
+        var cartRow = document.createElement('div')
+        cartRow.classList.add('cart-row')
+        var cartItems = document.getElementsByClassName('cart-items')[0]
+        var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+        for (var i = 0; i < cartItemNames.length; i++) {
+            if (cartItemNames[i].innerText == title) {
+                alert('This item is already added to the cart')
+                return
+            }
+        }
+        var cartRowContents = `
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+            <span class="cart-item-title">${title}</span>
+        </div>
+        <span class="cart-price cart-column"> ${price}</span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn btn-danger" type="button">REMOVE</button>
+        </div>`
+        cartRow.innerHTML = cartRowContents
+        cartItems.append(cartRow)
+        cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+        cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+    }
+
+    function updateCartTotal() {
+        var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+        var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+        var total = 0
+        for (var i = 0; i < cartRows.length; i++) {
+            var cartRow = cartRows[i]
+            var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+            var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+            var price = parseFloat(priceElement.innerText.replace('₹', ''))
+            var quantity = quantityElement.value
+            total = total + (price * quantity)
+        }
+        total = Math.round(total * 100) / 100
+        document.getElementsByClassName('cart-total-price')[0].innerText = total
+    }
+</script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    var orderId;
+    $(document).ready(function () {
+        var settings = {
+            "url": "/create/orderId",
+            "method": "POST",
+            "timeout": 0,
+            "headers": { "Content-Type": "application/json" },
+            "data": JSON.stringify({
+                "amount": "200"
+            }),
+        };
+
+        //creates new orderId everytime
+        $.ajax(settings).done(function (response) {
+            orderId = response.orderId;
+            console.log(orderId);
+            $("button").show();
+        });
+    });
+
+    document.getElementById('rzp-button1').onclick = function (e) {
+
+        var options = {
+            "key": "rzp_test_IAdXdrHNpx6X7G", // Enter the Key ID generated from the Dashboard
+            "amount": document.getElementsByClassName('cart-total-price')[0].innerText * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "Online Pharma Store",
+            "description": "Payment for your purchase",
+            "image": "https://cdn.iconscout.com/icon/free/png-256/rupee-1795412-1522779.png",
+            "order_id": orderId, //This is a sample Order ID. Pass the `id` obtained in the previous step
+            "handler": function (response) {
+                alert("Kindly note your payment ID for reference: " + response.razorpay_payment_id);
+                //alert(response.razorpay_order_id);
+                //alert(response.razorpay_signature)
+            },
+            "prefill": {
+                "name": "Gaurav Kumar",
+                "email": "gaurav.kumar@example.com",
+                "contact": "9999999999"
+            },
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response) {
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+        });
+        console.log(document.getElementsByClassName('cart-total-price')[0].innerText / 10000)
+
+        rzp1.open();
+        e.preventDefault();
+    }
+</script>
+
+</html>

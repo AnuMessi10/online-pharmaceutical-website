@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #d7f7e8;
+        }
+
+        nav {
+            line-height: 1;
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .nav-link {
+            color: rgb(250, 250, 250) !important;
+            margin-left: 15px;
+            font-size: 1.2rem;
+            font-weight: 400;
+
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+            color: #198754 !important;
+        }
+
+        button {
+            font-size: 1.2rem;
+            width: 6rem;
+
+        }
+
+        .links ul li a {
+            color: rgb(212, 212, 212);
+        }
+
+        h4 {
+            font-family: 'Pacifico', cursive;
+            margin: auto;
+            color: #ddfdff;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .position-sticky {
+            position: sticky !important;
+        }
+
+        .containertop {
+            width: 100%;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            color: white;
+            height: 26vh;
+            font-size: 1.5rem;
+            align-items: center;
+        }
+
+        .containertop h1 {
+            padding-bottom: 3px;
+            border-bottom: 5px solid #198754;
+        }
+
+        .motto {
+
+            background-color: black;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .motto p {
+            font-size: 1.4rem;
+            display: flex;
+            color: white;
+            max-width: 650px;
+            text-align: center;
+        }
+
+
+        .container3 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .ourteam {
+            display: inline-block;
+            max-width: 1080px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            height: 15rem;
+            margin: 0 2rem;
+        }
+
+        .links2 {
+            display: flex;
+            padding: 7px;
+        }
+
+        .links2 ul li a {
+            color: black;
+            font-size: 19px;
+            display: flex;
+            justify-content: center;
+            /* box-shadow: aqua; */
+            /* border: 1px solid; */
+            margin: 13px;
+
+        }
+
+        .col-4 {
+
+            flex-basis: 55%;
+            padding: 3px;
+            min-width: 200px;
+            margin-bottom: 5px;
+
+        }
+
+        .col-4 img {
+            width: 100%;
+            /* margin-left: -72px; */
+
+        }
+
+        .col-4 p {
+            font-size: 23px;
+            margin-top: auto;
+            margin-bottom: auto;
+            /* color: azure; */
+            /* width: 471px; */
+            font-size: 1rem;
+        }
+
+
+        .col-4 a {
+            color: black;
+        }
+
+        .col-4 a:hover {
+            color: red;
+
+        }
+
+        footer {
+            color: azure;
+        }
+
+
+        td {
+            padding: 30px 80px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 25px;
+            color: black;
+        }
+
+        #table {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    {{!-- navbar --}}
+    {{>navbar}}
+    {{!-- About us --}}
+    <div class="containertop" style="width: 100%;">
+        <h1 style="color: black;">About Us</h1>
+    </div>
+    {{!-- 100%trust --}}
+    <div class="motto">
+        <h1 style="color: white; margin-top: 1rem;"><b>100%Trust</b></h1>
+        <p>We are committed to your health and well-being. We ensure to provide the best services and increase your
+            safety coeffiecient.
+            A team that works hard 24/7 to keep you connected and strives for perfection in every aspect.
+        </p>
+    </div>
+    {{!-- Our team --}}
+    <div class="PART3" style="margin:28px 0px; ">
+        <h1 style="text-align: center;  padding: 20px 0px; padding-bottom: 25px; font-size: 3rem;  ">
+            Our Team</h1>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 footer ">
+                    <div class="links2 shadow">
+                        <ul type="none">
+                            <li><a href="#" style="text-decoration: none;">Nihar Vira</a></li>
+                            <li><a href="#" style="text-decoration: none;">Third Year IT Engineering</a></li>
+                            <li><a href="mailto: 201903052.niharvkm@student.xavier.ac.in"
+                                    style="text-decoration: none;">201903052.niharvkm@student.xavier.ac.in</a>
+                            </li>
+                            <li><a href="#" style="text-decoration: none;">Contact: 9932673240</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 footer ">
+                    <div class="links2 shadow">
+                        <ul type="none">
+
+                            <li><a href="#" style="text-decoration: none;">Anurag Yadav</a></li>
+                            <li><a href="#" style="text-decoration: none;">Third Year IT Engineering</a></li>
+                            <li><a href="mailto: 201903055.anuragydr@student.xavier.ac.in"
+                                    style="text-decoration: none; ">201903055.anuragydr@student.xavier.ac.in</a>
+                            </li>
+                            <li><a href="#" style="text-decoration: none;">Contact: 9664532450</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 footer ">
+                    <div class="links2 shadow">
+                        <ul type="none">
+                            <li><a href="#" style="text-decoration: none;">Siddharth Yennuwar</a></li>
+                            <li><a href="#" style="text-decoration: none;">Third Year IT Engineering</a></li>
+                            <li><a href="mailto:201903056.siddharthyva@student.xavier.ac.in"
+                                    style="text-decoration: none;">201903056.siddharthyva@student.xavier.ac.in</a>
+                            </li>
+                            <li><a href="#" style="text-decoration: none;">Contact: 9664532450</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- Footer --}}
+    {{>footer}}
+
+</body>
+
+
+</html>
