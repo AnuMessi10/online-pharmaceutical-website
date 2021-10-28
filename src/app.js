@@ -185,6 +185,6 @@ app.post("/registration", async (req, res) => {
 })
 
 // check if server is running
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Server is running at port no ${port}`)
 })
