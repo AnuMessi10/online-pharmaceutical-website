@@ -2,20 +2,20 @@ const express = require("express");
 const path = require('path');
 const app = express();
 const hbs = require("hbs")
-const bycrypt = require("bcryptjs")// converts to  hash value
 const Razorpay = require('razorpay');
+const bycrypt = require("bcryptjs")// helps convert text into hash value 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
 const port = process.env.PORT || 3000;
 
-// require("./db/conn");  // connected my mongo db with express
+ // connected my mongo db with express
 const MongoClient = require('mongodb').MongoClient
 const Register = require("./models/registration");
 const Contact = require("./models/contact");
 
 const static_path = path.join(__dirname, "../public")
-const templates_path = path.join(__dirname, "../templates/views"); // give the desired path of folder to connect with the html file
+const templates_path = path.join(__dirname, "../templates/views"); // gives the desired path of folder to connect with the html file
 const partials_path = path.join(__dirname, "../templates/partials"); // run the file in partials folder i.e navbar
 const images = path.join(__dirname, "../images")
 // USE TO GET VALUE FROM FORM
@@ -49,15 +49,7 @@ app.post('/createOrder', function (req, res) {
 
 // open index page first
 var database
-// MongoClient.connect("mongodb+srv://anu:anu10@online-pharmaceutical-w.xdhjx.mongodb.net/Pharmaceutical?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true },
-//     (error, result) => {
-//         if (error) throw error
-//         database = result.db("Medicine")
-//         console.log("medicine.js connected successfully")
-//     })
-
 const mongoose = require("mongoose");
-
 const DBase = "mongodb+srv://anu:anu10@online-pharmaceutical-w.xdhjx.mongodb.net/Pharmaceutical?retryWrites=true&w=majority"
 
 mongoose.connect(DBase, {
@@ -65,8 +57,6 @@ mongoose.connect(DBase, {
     useUnifiedTopology: true
 }).then(() => {
     console.log(`connection successful for cluster`);
-    //    if (error) throw error
-    //    database = result.db("Medicine")
     console.log("medicine.js connected successfully")
 }).catch((e) => {
     console.log(`no connection ${e}`);
